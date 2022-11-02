@@ -1,5 +1,98 @@
+/* #region utility */
+
+:root {
+    --azure: #8EDAFC;
+    --selected: #E9EBEB;
+    --back: #EAEAEA;
+    --chat-footer: #F3EEEA;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
+
+
+img {
+    max-width: 100%;
+}
+
+/* #endregion utility */
+
+.contacts {
+    width: 30%;
+    background: var(--back);
+}
+
+.chat {
+    width: 70%;
+}
+
+.contacts,
+.chat {
+    margin: 1rem 0;
+    height: 95vh;
+}
+
+/* #region contacts */
+
+.header-top .user {
+    height: 7vh;
+}
+
+.user img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 .5rem 0 .5rem;
+}
+
+.icons i {
+    padding: 0 .4rem;
+    scale: 1.2;
+}
+
+.header-main {
+    background-color: var(--azure);
+    padding: .3rem 0;
+}
+
+.header-main i {
+    scale: 1.8;
+    top: 30%;
+    left: 13px;
+    position: absolute;
+    color: var(--azure);
+}
+
+.icon-bell {
+    background-color: white;
+    border-radius: 50%;
+    height: 45px;
+    width: 45px;
+    position: relative;
+    margin-left: 1.7rem;
+}
+
+.header-main .text {
+    padding-left: 1.5rem;
+}
+
+.search {
+    background-color: white;
+    color: grey;
+    margin: .3rem;
+}
+
+.search i {
+    border-right: 1px solid var(--back);
+    padding-right: 1rem;
+}
+
+.contacts .main {
+    height: calc(77vh - 3px);
+    background: lightslategray;
+}
+
+/* #endregion contacts */
