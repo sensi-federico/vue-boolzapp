@@ -37,6 +37,10 @@ img {
 
 /* #region contacts */
 
+.header-top {
+    height: calc(7vh + 2px);
+}
+
 .header-top .user {
     height: 7vh;
 }
@@ -51,6 +55,7 @@ img {
 .icons i {
     padding: 0 .4rem;
     scale: 1.2;
+    color: grey;
 }
 
 .header-main {
@@ -96,3 +101,50 @@ img {
 }
 
 /* #endregion contacts */
+
+/* #region chat */
+
+.chat {
+    background-color: var(--back);
+}
+
+.user-text p {
+    font-size: small;
+    color: grey;
+}
+
+.chat .icons {
+    margin-right: 1rem;
+}
+
+.chat-header-top {
+    height: calc(7vh + 2px);
+    border-left: 1.5px solid rgb(128, 128, 128, 0.2);
+}
+
+.chat-main {
+    background-image: url("../img/mine.jpg");
+    height: 80vh;
+}
+
+.chat-header-bot {
+    background-color: var(--back);
+    height: calc(9vh - 8px);
+    padding: 0 1rem 0 1rem;
+}
+
+.chat-header-bot i {
+    scale: 1.5;
+    padding: 0 2rem;
+    color: grey;
+}
+
+.write {
+    background-color: white;
+    width: 80%;
+    text-align: left;
+    padding: .5rem 1rem;
+    border-radius: 1rem;
+}
+
+/* #endregion chat */
