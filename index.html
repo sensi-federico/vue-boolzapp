@@ -54,7 +54,27 @@
                 </div>
             </div>
 
-            <div class="main"></div>
+            <div class="contact-main">
+                <div v-for="(contact, i) in contacts" class="contact d-flex">
+                    <img class="user-img" src="./assets/img/avatar_1.jpg" alt="">
+                    <div class="user-text">
+                        <h5>{{contacts[i].name}}</h5>
+                        <p class="m-0 text-muted">Ultimo messaggio inviato</p>
+                    </div>
+                    <small class="ml-5 pl-5 text-muted">12:00</small>
+                </div>
+
+                            <!-- ############### OVERFLOW TEST ############## -->
+                <div v-for="(contact, i) in contacts" class="contact d-flex">
+                    <img class="user-img" src="./assets/img/avatar_1.jpg" alt="">
+                    <div class="user-text">
+                        <h5>{{contacts[i].name}}</h5>
+                        <p class="m-0 text-muted">Ultimo messaggio inviato</p>
+                    </div>
+                    <small class="ml-5 pl-5 text-muted">12:00</small>
+                </div>
+            </div>
+                            <!-- ############### OVERFLOW TEST ############## -->
 
         </section>
 
