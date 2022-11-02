@@ -32,13 +32,12 @@ img {
 .contacts,
 .chat {
     margin: 1rem 0;
-    height: 95vh;
 }
 
 /* #region contacts */
 
 .header-top {
-    height: calc(7vh + 2px);
+    height: 7vh;
 }
 
 .header-top .user {
@@ -96,7 +95,6 @@ img {
 }
 
 .contacts .main {
-    height: calc(77vh - 3px);
     background: lightslategray;
 }
 
@@ -118,7 +116,7 @@ img {
 }
 
 .chat-header-top {
-    height: calc(7vh + 2px);
+    height: 7vh;
     border-left: 1.5px solid rgb(128, 128, 128, 0.2);
 }
 
@@ -129,7 +127,7 @@ img {
 
 .chat-header-bot {
     background-color: var(--back);
-    height: calc(9vh - 8px);
+    height: 8vh;
     padding: 0 1rem 0 1rem;
 }
 
