@@ -18,8 +18,6 @@ img {
     max-width: 100%;
 }
 
-/* #endregion utility */
-
 .contacts {
     width: 30%;
     background: var(--back);
@@ -33,6 +31,13 @@ img {
 .chat {
     margin: 1rem 0;
 }
+
+.my-container {
+    max-width: 90%;
+    margin: auto;
+}
+/* #endregion utility */
+
 
 /* #region contacts */
 
@@ -156,6 +161,10 @@ img {
     width: 50px;
     border-radius: 50%;
     margin: 0 1rem;
+}
+
+.sent {
+    text-align: right;
 }
 
 /* #endregion chat */
