@@ -2,6 +2,7 @@ const { createApp } = Vue
 createApp({
     data() {
         return {
+            nameSearched: '',
             newReceived: {
                 message: 'Ok!',
                 status: 'received'
@@ -177,9 +178,11 @@ createApp({
         }
     },
     methods: {
-        changeActive(index){
+
+        changeActive(index) {
             this.active = index
         },
+
         sendMessage(active) {
             this.contacts[active].messages.push(this.newMessage)
             this.newMessage = {
@@ -188,8 +191,29 @@ createApp({
             }
             setTimeout(this.receivedMessage, 1000)
         },
-        receivedMessage(){
+
+        receivedMessage() {
             this.contacts[this.active].messages.push(this.newReceived)
+        },
+
+        search() {
+            this.contacts.forEach(contact => {
+                contact.visible = false
+                let userToSearch = ''
+                const name = contact.name.toLowerCase()
+                const nameToShow = this.nameSearched.toLowerCase()
+                for (let i = 0; i < name.length; i++) {
+                    userToSearch += name.charAt(i)
+                    console.log(nameToShow, userToSearch)
+                    if (userToSearch === nameToShow){
+                        contact.visible = true
+                        console.log('sei qui')
+                    }
+                }
+                if (nameToShow === ''){
+                    contact.visible = true
+                }
+            })
         }
     }
 }).mount('#app')

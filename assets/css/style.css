@@ -5,6 +5,8 @@
     --selected: #E9EBEB;
     --back: #EAEAEA;
     --chat-footer: #F3EEEA;
+    --sent: #D5F9BA;
+
 }
 
 * {
@@ -20,7 +22,8 @@ img {
 
 .contacts {
     width: 40%;
-    background: var(--back);
+    background: white;
+    border-right: .1px solid rgb(128, 128, 128, 0.2);
 }
 
 .chat {
@@ -40,6 +43,15 @@ img {
 p {
     margin: 0 !important;
 }
+
+.show {
+    display: flex;
+}
+
+.not-show {
+    display: none;
+}
+
 /* #endregion utility */
 
 
@@ -48,6 +60,7 @@ p {
 .header-top {
     height: 9vh;
     padding: 0 1rem;
+    background-color: var(--back);
 }
 
 .user img {
@@ -89,22 +102,23 @@ p {
 }
 
 .search {
-    background-color: white;
+    background-color: var(--back);
     color: grey;
-    margin: 0.5rem;
-    padding: 0.5rem;
+    padding: 1rem;
 }
 
 .search i {
     border-right: 1px solid var(--back);
     padding-right: 1rem;
+    background-color: white;
+    padding-top: .25rem;
+    padding-bottom: .25rem;
 }
 
 .contact-main {
     height: 70vh;
     width: 100%;
     overflow: auto;
-    border-right: .1px solid rgb(128, 128, 128, 0.2);
 }
 
 /* #endregion contacts */
@@ -132,6 +146,7 @@ p {
 .chat-main {
     background-image: url("../img/mine.jpg");
     height: 78vh;
+    overflow: auto;
 }
 
 .chat-footer {
@@ -151,7 +166,7 @@ p {
     width: 80%;
     text-align: left;
     padding: .5rem 1rem;
-    border-radius: 1rem;
+    border-radius: .5rem;
 }
 
 .contact {
@@ -179,18 +194,21 @@ p {
 }
 
 .green {
-    background-color: lightgreen;
+    background-color: var(--sent);
     align-self: flex-end;
+    font-size: small;
 }
 
 .white {
     background-color: white;
     align-self: flex-start;
+    font-size: small;
 }
 
 input {
     width: 100%;
     border: none;
+    outline: 0;
 }
 
 /* #endregion chat */
