@@ -62,7 +62,7 @@
                         <img class="user-img" :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="">
                         <div class="user-text">
                             <h5>{{contacts[i].name}}</h5>
-                            <p class="m-0 text-muted">Ultimo messaggio inviato</p>
+                            <p class="m-0 text-muted">{{contacts[i].messages[contacts[i].messages.length-1].message}}</p>
                         </div>
                     </div>
                     <div class="right">
