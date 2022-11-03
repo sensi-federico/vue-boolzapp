@@ -188,4 +188,9 @@ p {
     align-self: flex-start;
 }
 
+input {
+    width: 100%;
+    border: none;
+}
+
 /* #endregion chat */

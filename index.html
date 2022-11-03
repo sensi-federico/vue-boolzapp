@@ -102,7 +102,7 @@
             <div class="chat-footer d-flex align-items-center justify-content-between">
                 <i class="fa fa-smile" aria-hidden="true"></i>
                 <div class="write">
-                    <small>Scrivi un messaggio</small>
+                    <input class="" type="text" placeholder="Scrivi un messaggio" v-model="newMessage.message" @keyup.enter="sendMessage(active)">
                 </div>
                 <i class="fa fa-microphone" aria-hidden="true"></i>
             </div>
