@@ -55,27 +55,20 @@
             </div>
 
             <div class="contact-main">
-                <div v-for="(contact, i) in contacts" class="contact d-flex">
-                    <img class="user-img" :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="">
-                    <div class="user-text">
-                        <h5>{{contacts[i].name}}</h5>
-                        <p class="m-0 text-muted">Ultimo messaggio inviato</p>
+                <div v-for="(contact, i) in contacts" class="contact d-flex justify-content-between m-0 p-2 pt-4" @click="changeActive(i)">
+                    <div class="left d-flex">
+                        <img class="user-img" :src="'./assets/img/avatar' + contact.avatar + '.jpg'" alt="">
+                        <div class="user-text">
+                            <h5>{{contacts[i].name}}</h5>
+                            <p class="m-0 text-muted">Ultimo messaggio inviato</p>
+                        </div>
                     </div>
-                    <small class="ml-5 pl-5 text-muted">12:00</small>
+                    <div class="right">
+                        <small class="text-right text-muted pr-3">12:00</small>
+                    </div>
+                        
                 </div>
             </div>
-
-                <!-- ############### OVERFLOW TEST ############## -->
-                <!-- <div v-for="(contact, i) in contacts" class="contact d-flex">
-                    <img class="user-img" src="./assets/img/avatar_1.jpg" alt="">
-                    <div class="user-text">
-                        <h5>{{contacts[i].name}}</h5>
-                        <p class="m-0 text-muted">Ultimo messaggio inviato</p>
-                    </div>
-                    <small class="ml-5 pl-5 text-muted">12:00</small>
-                </div>
-            </div> -->
-                <!-- ############### OVERFLOW TEST ############## -->
 
         </section>
 
@@ -85,9 +78,9 @@
 
             <div class="chat-header-top d-flex justify-content-between align-items-center p-1">
                 <div class="user d-flex align-items-center">
-                    <img src="./assets/img/avatar_1.jpg" alt="">
+                    <img :src="'./assets/img/avatar' + contacts[active].avatar + '.jpg'" alt="">
                     <div class="user-text">
-                        <h6 class="m-0">Michele</h6>
+                        <h6 class="m-0">{{contacts[active].name}}</h6>
                         <p class="m-0">Ultimo accesso alle 12:00 </p>
                     </div>
                 </div>
@@ -99,21 +92,14 @@
             </div>
 
             <div class="chat-main">
-                <div class="d-flex">
-                    <div class="my-container">
-                        <div class="received bg-light">
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
-                    </div>
-                    <div class="my-container">
-                        <div class="sent bg-success">
-                            <p>Lorem ipsum dolor sit amet.</p>
-                        </div>
+                <div class="my-container d-flex flex-column">
+                    <div class="messages" v-for="message in contacts[active].messages" :class="message.status === 'sent' ? 'green' : 'white'">
+                        {{message.message}}
                     </div>
                 </div>
             </div>
 
-            <div class="chat-header-bot d-flex align-items-center justify-content-between">
+            <div class="chat-footer d-flex align-items-center justify-content-between">
                 <i class="fa fa-smile" aria-hidden="true"></i>
                 <div class="write">
                     <small>Scrivi un messaggio</small>

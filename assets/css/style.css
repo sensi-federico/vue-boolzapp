@@ -19,12 +19,12 @@ img {
 }
 
 .contacts {
-    width: 30%;
+    width: 40%;
     background: var(--back);
 }
 
 .chat {
-    width: 70%;
+    width: 60%;
 }
 
 .contacts,
@@ -36,17 +36,18 @@ img {
     max-width: 90%;
     margin: auto;
 }
+
+p {
+    margin: 0 !important;
+}
 /* #endregion utility */
 
 
 /* #region contacts */
 
 .header-top {
-    height: 7vh;
-}
-
-.header-top .user {
-    height: 7vh;
+    height: 9vh;
+    padding: 0 1rem;
 }
 
 .user img {
@@ -57,18 +58,17 @@ img {
 }
 
 .icons i {
-    padding: 0 .4rem;
-    scale: 1.2;
+    padding: 0 .6rem;
     color: grey;
 }
 
 .header-main {
     background-color: var(--azure);
-    padding: .3rem 0;
+    padding: 1rem 0;
 }
 
 .header-main i {
-    scale: 1.8;
+    scale: 1.3;
     top: 30%;
     left: 13px;
     position: absolute;
@@ -91,7 +91,8 @@ img {
 .search {
     background-color: white;
     color: grey;
-    margin: .3rem;
+    margin: 0.5rem;
+    padding: 0.5rem;
 }
 
 .search i {
@@ -100,8 +101,10 @@ img {
 }
 
 .contact-main {
-    height: 75vh;
+    height: 70vh;
+    width: 100%;
     overflow: auto;
+    border-right: .1px solid rgb(128, 128, 128, 0.2);
 }
 
 /* #endregion contacts */
@@ -122,22 +125,22 @@ img {
 }
 
 .chat-header-top {
-    height: 7vh;
+    height: 9vh;
     border-left: 1.5px solid rgb(128, 128, 128, 0.2);
 }
 
 .chat-main {
     background-image: url("../img/mine.jpg");
-    height: 80vh;
+    height: 78vh;
 }
 
-.chat-header-bot {
+.chat-footer {
     background-color: var(--back);
     height: 8vh;
     padding: 0 1rem 0 1rem;
 }
 
-.chat-header-bot i {
+.chat-footer i {
     scale: 1.5;
     padding: 0 2rem;
     color: grey;
@@ -154,7 +157,13 @@ img {
 .contact {
     margin: 1rem 0;
     padding: .5rem 0;
-    border-top: 1px solid grey;
+    border-top: .1px solid rgb(128, 128, 128, 0.2);
+    background: white;
+}
+
+.contact:hover {
+    cursor: pointer;
+    background-color: rgb(232, 234, 236);
 }
 
 .user-img {
@@ -163,8 +172,20 @@ img {
     margin: 0 1rem;
 }
 
-.sent {
-    text-align: right;
+.messages {
+    padding: 1rem;
+    border-radius: .3rem;
+    margin-top: .5rem;
+}
+
+.green {
+    background-color: lightgreen;
+    align-self: flex-end;
+}
+
+.white {
+    background-color: white;
+    align-self: flex-start;
 }
 
 /* #endregion chat */
