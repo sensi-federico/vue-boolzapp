@@ -198,21 +198,11 @@ createApp({
 
         search() {
             this.contacts.forEach(contact => {
-                contact.visible = false
-                let userToSearch = ''
-                const name = contact.name.toLowerCase()
-                const nameToShow = this.nameSearched.toLowerCase()
-                for (let i = 0; i < name.length; i++) {
-                    userToSearch += name.charAt(i)
-                    console.log(nameToShow, userToSearch)
-                    if (userToSearch === nameToShow){
-                        contact.visible = true
-                        console.log('sei qui')
-                    }
-                }
-                if (nameToShow === ''){
+                 if (contact.name.toLowerCase().includes(this.nameSearched)){
                     contact.visible = true
-                }
+                 } else {
+                    contact.visible = false
+                 }
             })
         }
     }
